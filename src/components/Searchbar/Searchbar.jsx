@@ -8,9 +8,6 @@ export class Searchbar extends Component {
     return (
       <header className={css.searchbar}>
         <form className={css.searchForm} onSubmit={this.props.onSubmit}>
-          <button type="submit" className={css.searchForm_button}>
-            <span className={css.searchForm_span}>Search</span>
-          </button>
           <input
             className={css.searchForm_input}
             type="text"
@@ -19,6 +16,9 @@ export class Searchbar extends Component {
             autoFocus
             placeholder="Search images and photos"
           />
+          <button type="submit" className={css.searchForm_button}>
+            <span className={css.searchForm_span}>Search</span>
+          </button>
         </form>
       </header>
     );

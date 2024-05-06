@@ -25,7 +25,7 @@ export const App = () => {
     setPage(1);
   };
 
-  const onNextPage = () => {
+  const onPage = () => {
     setPage(prevState => prevState + 1);
     setIsLoading(true);
   };
@@ -70,7 +70,7 @@ export const App = () => {
       <Searchbar onSubmit={onSubmit} />
       <ImageGallery images={images} onClickImage={onClickImage} />
       {isLoading && <Loader />}
-      {showBtn && <Button onNextPage={onNextPage} />}
+      {showBtn && <Button onPage={onPage} />}
       {showModal && (
         <Modal largeImageURL={largeImageURL} onModalClose={onModalClose} />
       )}
