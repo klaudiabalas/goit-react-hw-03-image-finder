@@ -12,7 +12,7 @@ export const searchByQuery = async (query, page) => {
       orientation: 'horizontal',
       safesearch: true,
       per_page: 12,
-      page: 1,
+      page: page,
     },
   });
   return response.data.hits;
